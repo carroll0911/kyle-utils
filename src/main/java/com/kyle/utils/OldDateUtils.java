@@ -1,4 +1,4 @@
-package com.carroll.utils;
+package com.kyle.utils;
 
 
 import java.math.BigDecimal;
@@ -271,7 +271,7 @@ public class OldDateUtils {
      * @return
      */
     public static boolean isBeforeToday(final Date date) {
-        return date.getTime() < DateUtils.dayBegin(new Date()).getTime();
+        return date.getTime() < dayBegin(new Date()).getTime();
     }
 
     /**
@@ -282,8 +282,8 @@ public class OldDateUtils {
      * @return
      */
     public static boolean isTheDay(final Date date, final Date day) {
-        return date.getTime() >= DateUtils.dayBegin(day).getTime()
-                && date.getTime() <= DateUtils.dayEnd(day).getTime();
+        return date.getTime() >= dayBegin(day).getTime()
+                && date.getTime() <= dayEnd(day).getTime();
     }
 
     /**
