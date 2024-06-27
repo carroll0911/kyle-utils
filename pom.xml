@@ -6,7 +6,7 @@
 
     <groupId>io.github.kyle0911</groupId>
     <artifactId>kyle-utils</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <description>utils package</description>
     <properties>
 <!--        <spring.boot.version>1.5.3.RELEASE</spring.boot.version>-->
