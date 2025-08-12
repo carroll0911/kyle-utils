@@ -166,4 +166,22 @@ public class StringUtil {
     public static boolean isEmpty(Object str) {
         return str == null || "".equals(str);
     }
+
+    public static String shortUUID() {
+        UUID uuid = UUID.randomUUID();
+        byte[] bytes = new byte[16];
+        System.arraycopy(longToBytes(uuid.getMostSignificantBits()), 0, bytes, 0, 8);
+        System.arraycopy(longToBytes(uuid.getLeastSignificantBits()), 0, bytes, 8, 8);
+        return Base64.getUrlEncoder().withoutPadding().encodeToString(bytes)
+                .substring(0, 11); // 截取前11字符（如 "QkL3hYt7TdM"）
+    }
+
+    private static byte[] longToBytes(long value) {
+        byte[] result = new byte[8];
+        for (int i = 7; i >= 0; i--) {
+            result[i] = (byte)(value & 0xFF);
+            value >>= 8;
+        }
+        return result;
+    }
 }
