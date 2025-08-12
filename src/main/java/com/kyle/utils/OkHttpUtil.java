@@ -43,9 +43,9 @@ public class OkHttpUtil {
     }
 
     private OkHttpUtil(int CONNECT_TIMEOUT,int READ_TIMEOUT,int WRITE_TIMEOUT) {
-        this.CONNECT_TIMEOUT = CONNECT_TIMEOUT;
-        this.READ_TIMEOUT = READ_TIMEOUT;
-        this.WRITE_TIMEOUT = WRITE_TIMEOUT;
+        CONNECT_TIMEOUT = CONNECT_TIMEOUT;
+        READ_TIMEOUT = READ_TIMEOUT;
+        WRITE_TIMEOUT = WRITE_TIMEOUT;
     }
     /**
      * 参数初始化
